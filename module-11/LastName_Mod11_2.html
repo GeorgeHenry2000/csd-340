@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- George Higginbotham
+     Assignment: 11.2 -->
+<html>
+    <head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        var todo =[];
+        function add() {
+            var input = document.querySelector('input[name="input"]').value;
+            todo.push(input);
+            document.getElementById('myText').value='';
+            alert("Added: " + todo.length + ". " + input);
+        }
+        function deleteLastEntry() {
+            var original_length = todo.length;
+            alert("Deleting: " + original_length + ". " + todo.pop());
+        }
+        function display() {
+            var output = document.getElementById('output');
+            for (var i = 0; i < todo.length; i++) {
+                output.innerHTML += 'Item' + (i + 1) + ' = ' + todo[i] + '<br>';
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        <div id="instructions">
+            <p>This is an interactive To Do list. Type in your first item in the text book, then click Add. Click the Display button to see current items in the list. Click on Delete Last Entry if you'd like to remove the last entry.</p>
+        </div>
+        <div id="input">
+            <input type="text" id="myText" name="input">
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="deleteLastEntry()">Delete Last Entry</button>
+            <button type="button" onclick="display()">Display</button>
+        </div>
+        <hr />
+        <div id=output>
+        </div>
+      
+    </body>
+</html>
+        
