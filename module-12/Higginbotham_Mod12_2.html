@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- George Higginbotham
+     Assignment Number -->
+<html>
+    <head>
+        <title> CSD 340 Web Development with HTML and CSS</title>
+        <link href="Higginbotham_Mod12_2.css" type="text/css" rel="stylesheet" />
+    </head>
+    <script>
+        var fav_Books = ["Twilight", "1984", "The Martian", "Animal Farm", "Five Chimneys", "Slaughterhouse-Five", "Opening Skinner's Box", "The Thing's They Carried", "Night", "Cujo"]
+        
+        function descending() {
+                var output = document.getElementById('output');
+                output.innerHTML = ""
+                for (var i = (fav_Books.length - 1); i >= 0; i--) {
+                    output.innerHTML += (i+1) + '. ' + fav_Books[i] + '<br>';
+                }
+            }
+        function ascending() {
+                var output = document.getElementById('output');
+                output.innerHTML = ""
+                for (var i = 0; i < fav_Books.length; i++) {
+                    output.innerHTML += (i+1) + '. ' + fav_Books[i] + '<br>';
+                }
+            }
+    
+    
+    </script>
+    <body>
+        <div id="container">
+            <h1> Assignment 12.2: JavaScript - Part 4</h1>
+            <div id="left">
+                <h3> Top 10 Favorite Books</h3>
+                <button type="button" onclick="ascending()">Top to Bottom</button>
+                <button type="button" onclick="descending()">Bottom to Top</button>
+                <hr>
+                <div id=output>
+                </div>
+            </div><!-- left div-->
+            <div id="right">
+                <h3>5 Things I've Learned Since The Course Started</h3>
+                <ul>
+                    <li>HTML and CSS are the foundations to creating websites</li>
+                    <li>You can use google fonts to make your website more attractive</li>
+                    <li>There are multiple ways to specify color in CSS</li>
+                    <li>It is helpful that every HTML element is inside a box</li>
+                    <li>It is important to understand how people think in order to make a webpage user friendly</li>
+                
+                </ul>
+            </div><!-- right div-->
+            <div id="lastdiv">
+                <a href="../index.html">Home</a>
+            </div><!-- last div-->
+        </div>
+    </body>
+</html>
